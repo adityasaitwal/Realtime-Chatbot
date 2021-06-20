@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+<body>
+
+    <style>
+        body{
+            text-align:center;
+            font: bold;
+            color: whitesmoke;
+            background-color: black;
+        }
+        h1{
+            margin-top: 10%;
+        }
+    </style>
+
+    <form method="POST">
+        {%csrf_token%}
+        <div class="container">
+            <h1>Login To ChatApp</h1>
+            <div class="box">
+                <input type="username" name="username" id="username" placeholder="Enter your Username"> 
+            </div>
+            <br>
+            <div class="box">
+                <input type="password" name="password" id="password" placeholder="Enter your Password">
+            </div>
+        </div>
+        <br>
+        <button class="button1" type="submit">LogIn</button>
+
+    </form>
+
+    <br>
+    <a href="{%url 'password_reset'%}">Forgot Password?</a>
+    
+</body>
+</html>
